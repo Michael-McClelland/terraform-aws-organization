@@ -1,5 +1,5 @@
 output "organization_arn" {
-  value = aws_organizations_organization.organization.arn
+  value = data.aws_organizations_organization.organization.arn
 }
 
 output "organizational_units" {
