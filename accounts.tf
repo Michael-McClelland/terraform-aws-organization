@@ -2,7 +2,7 @@ locals {
   level_root_account_arguments = [
     for level_root_account in var.organization.accounts :
     {
-      parent : aws_organizations_organization.organization.roots[0],
+      parent : data.aws_organizations_organization.organization.roots[0],
       key : level_root_account.key,
       name : level_root_account.name,
       email : level_root_account.email
